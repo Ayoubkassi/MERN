@@ -1,17 +1,18 @@
 import './App.css';
-import Jumbotron from './components/jumbotron/jumbotron.component';
-import jumboData from './fixtures/jumbo';
-import JumbotronContainer from './containers/jumbotron';
-import FooterContainer from './containers/footer';
-import FaqsContainer from './containers/faqs';
+import { BrowserRouter as Router, Route , Switch } from 'react-router-dom';
+import * as ROUTES from './constants/routes';
+import HomePage from './pages/home';
+import BrowsePage from './pages/browse';
+import SignIn from './pages/signin';
+import SignUp from './pages/signup';
+
+
 
 function App() {
   return (
-    <div className="App">
-        <JumbotronContainer />
-        <FaqsContainer />
-        <FooterContainer />
-    </div>
+    <Router>
+      <Route exact  path={ROUTES.HOME} component={HomePage} />
+    </Router>
   );
 }
 
