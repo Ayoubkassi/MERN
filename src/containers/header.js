@@ -3,7 +3,7 @@ import  Header  from '../components/header/header.component';
 import * as ROUTES from '../constants/routes';
 import logo from '../logo.svg';
 
-export function HeaderContainer({ children }) {
+function HeaderContainer({ children }) {
   return (
     <Header>
       <Header.Frame>
@@ -14,3 +14,5 @@ export function HeaderContainer({ children }) {
     </Header>
   );
 }
+
+export default HeaderContainer;
