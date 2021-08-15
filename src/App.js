@@ -12,6 +12,9 @@ function App() {
   return (
     <Router>
       <Route exact  path={ROUTES.HOME} component={HomePage} />
+      <Route exact  path={ROUTES.BROWSE} component={BrowsePage} />
+      <Route exact  path={ROUTES.SIGN_IN} component={SignIn} />
+      <Route exact  path={ROUTES.SIGN_UP} component={SignUp} />
     </Router>
   );
 }
