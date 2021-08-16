@@ -19,11 +19,12 @@ const SignIn = () => {
 
   const handleSignin = (event) => {
   event.preventDefault();
+
   firebase.auth().signInWithEmailAndPassword(emailAddress,password)
   .then(()=>{
-    //pysh to the browser page
-    //history.push(ROUTES.BROWSE);
-    console.log(history);
+    //push to the browser page
+    history.push(ROUTES.BROWSE);
+    //console.log(history);
 
   }).catch((err)=>{
     setEmailAddress('');
