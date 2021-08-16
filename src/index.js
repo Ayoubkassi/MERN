@@ -4,6 +4,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {GlobalStyles} from './global.styles';
 import 'normalize.css';
+import { firebase } from './firebase/firebase';
 
 ReactDOM.render(
   <React.StrictMode>
