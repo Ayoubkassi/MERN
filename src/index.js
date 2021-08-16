@@ -5,11 +5,14 @@ import reportWebVitals from './reportWebVitals';
 import {GlobalStyles} from './global.styles';
 import 'normalize.css';
 import { firebase } from './firebase/firebase';
+import { FirebaseContext } from './context/firebase';
 
 ReactDOM.render(
   <React.StrictMode>
-    <GlobalStyles />
-    <App />
+    <FirebaseContext.Provider value={{firebase}}>
+      <GlobalStyles />
+      <App />
+    </FirebaseContext.Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
