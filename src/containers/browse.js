@@ -35,7 +35,7 @@ const BrowseContainer = ({slides}) => {
     profile.displayName ? (
       <>
       {loading ? <Loading src={user.photoURL} /> : <Loading.ReleaseBody />}
-      <Header src="joker1">
+      <Header src="who">
         <Header.Frame>
             <Header.Group>
               <Header.Logo to={ROUTES.HOME} src={logo} alt="Netflix" />
@@ -66,11 +66,12 @@ const BrowseContainer = ({slides}) => {
 
 
         <Header.Feature>
-          <Header.FeatureCallOut>Watch Joker Now</Header.FeatureCallOut>
+          <Header.FeatureCallOut>Watch <span style={{color:'red'}}>Who Am I</span> Now</Header.FeatureCallOut>
           <Header.Text>
-                       Forever alone in a crowd, failed comedian Arthur Fleck seeks connection as he walks the streets of Gotham
-                       City. Arthur wears two masks -- the one he paints for his day job as a clown, and the guise he projects in a
-                       futile attempt to feel like he's part of the world around him.
+            Benjamin, a young German computer whiz, is invited to join a subversive hacker
+             group that wants to be noticed on the world's stage.
+
+
           </Header.Text>
           <Header.PlayButton>Play</Header.PlayButton>
         </Header.Feature>
