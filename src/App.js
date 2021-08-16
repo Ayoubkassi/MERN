@@ -6,38 +6,29 @@ import BrowsePage from './pages/browse';
 import SignIn from './pages/signin';
 import SignUp from './pages/signup';
 import { IsUserRedirect , ProtectedRoute } from './helpers/routes';
+import  useAuthListener  from './hooks/use-auth-listener';
 
 
 
 function App() {
-  const user = {};
+  const { user } = useAuthListener();
+  console.log(user);
   return (
     <Router>
-      <Route>
-        <IsUserRedirect user={user}
-                        loggedInPath={ROUTES.BROWSE}
-                        path={ROUTES.SIGN_IN}
-                        exact
-        />
-      </Route>
-      <Route>
-        <IsUserRedirect user={user}
-                        loggedInPath={ROUTES.BROWSE}
-                        path={ROUTES.SIGN_UP}
-                        exact
-        />
-      </Route>
-      <ProtectedRoute user={user} path={ROUTES.BROWSE}exact>
-        <BrowsePage />
-      </ProtectedRoute>
-      <Route>
-      <IsUserRedirect user={user}
-                        loggedInPath={ROUTES.BROWSE}
-                        path={ROUTES.HOME}
-                        exact
-        />
-      </Route>
-
+      <Switch>
+         <IsUserRedirect user={user} loggedInPath={ROUTES.BROWSE} path={ROUTES.SIGN_IN}>
+           <SignIn />
+         </IsUserRedirect>
+         <IsUserRedirect user={user} loggedInPath={ROUTES.BROWSE} path={ROUTES.SIGN_UP}>
+           <SignUp />
+         </IsUserRedirect>
+         <ProtectedRoute user={user} path={ROUTES.BROWSE}>
+           <BrowsePage />
+         </ProtectedRoute>
+         <IsUserRedirect user={user} loggedInPath={ROUTES.BROWSE} path={ROUTES.HOME}>
+           <HomePage />
+         </IsUserRedirect>
+       </Switch>
     </Router>
   );
 }
