@@ -8,3 +8,8 @@ And This is How Browse Page Look like
 
 
 ![alt Home](./Screenshot/Screenshot2.png)
+
+
+Here My favorite movie
+
+![alt Home](./Screenshot/final.png)
