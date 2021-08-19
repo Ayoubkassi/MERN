@@ -4,7 +4,7 @@ Hey Hey And Welcome Again This is a Web App using react , i've been trying to cr
 
 ![alt Home](./Screenshot/Screenshot.png)
 
-This is App Link : [Link to My Netflix](https://kassinetflix.herokuapp.com/)
+This is App Link : [Link to My App](https://kassinetflix.herokuapp.com/)
 
 And This is How Browse Page Look like
 
